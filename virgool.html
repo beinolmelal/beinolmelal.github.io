@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<link rel="dns-prefetch" href="//virgool.io">
+<link rel="dns-prefetch" href="//files.virgool.io">
+<link rel="dns-prefetch" href="//www.facebook.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//www.w3.org">
+<link rel="dns-prefetch" href="//vrgl.ir">
+<meta name="csrf-token" content="0Lsy3eES77DpL803xb5UYZmunJslCKwITVdxmPam">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.eu01.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"45c20108ef",applicationID:"3165686"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="https://virgool.io/manifest.json?v=v2.6.9">
+<title> آنچه سه سال برنامه نویسی از راه اشتباه به من آموخت -  آبْیْ‌بَنَفْشْ </title>
+<link rel="shortcut icon" type="image/x-icon" href=https://files.virgool.io/upload/publication/ntpwftp33dgt/ix1mv0.jpeg>
+<meta name="keywords" content="آبْیْ‌بَنَفْشْ,  ">
+<meta name="theme-color" content="#9370db">
+<link href="https://virgool.io/css/styles.css?v=v2.6.9" rel="stylesheet">
+<link rel="mask-icon" href="https://virgool.io/images/icon.svg?v=v2.6.9">
+<link rel="apple-touch-icon" href="https://files.virgool.io/upload/publication/ntpwftp33dgt/ix1mv0.jpeg">
+<link rel="apple-touch-icon" sizes="60x60" href="https://files.virgool.io/upload/publication/ntpwftp33dgt/ix1mv0.jpeg?x-img=v1/resize,w_60">
+<link rel="apple-touch-icon" sizes="76x76" href="https://files.virgool.io/upload/publication/ntpwftp33dgt/ix1mv0.jpeg?x-img=v1/resize,w_76">
+<link rel="apple-touch-icon" sizes="120x120" href="https://files.virgool.io/upload/publication/ntpwftp33dgt/ix1mv0.jpeg?x-img=v1/resize,w_120">
+<link rel="apple-touch-icon" sizes="152x152" href="https://files.virgool.io/upload/publication/ntpwftp33dgt/ix1mv0.jpeg?x-img=v1/resize,w_152">
+<meta property="og:site_name" content="ویرگول">
+<meta property="og:title" content="آنچه سه سال برنامه نویسی از راه اشتباه به من آموخت">
+<meta property="og:description" content="خیلی غم انگیزه که دارم این پست رو مینویسم چون دوسال پیش هم همچین پستی نوشتم و از اشتباهاتی که توی یک سال اول کردم رو گفتم و قرار بود دوباره…">
+<meta name="description" content="خیلی غم انگیزه که دارم این پست رو مینویسم چون دوسال پیش هم همچین پستی نوشتم و از اشتباهاتی که توی یک سال اول کردم رو گفتم و قرار بود دوباره…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://virgool.io/Novira/%D8%A2%D9%86%DA%86%D9%87-%D8%B3%D9%87-%D8%B3%D8%A7%D9%84-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%A7%D8%B2-%D8%B1%D8%A7%D9%87-%D8%A7%D8%B4%D8%AA%D8%A8%D8%A7%D9%87-%D8%A8%D9%87-%D9%85%D9%86-%D8%A2%D9%85%D9%88%D8%AE%D8%AA-u1fhbppkzgyp">
+<meta property="og:locale" content="fa">
+<meta name="referrer" content="unsafe-url">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@virgool_io">
+<meta name="twitter:title" content="آنچه سه سال برنامه نویسی از راه اشتباه به من آموخت">
+<meta name="twitter:description" content="خیلی غم انگیزه که دارم این پست رو مینویسم چون دوسال پیش هم همچین پستی نوشتم و از اشتباهاتی که توی یک سال اول کردم رو گفتم و قرار بود دوباره…">
+<meta property="article:author" content="Arman">
+<meta property="article:publisher" content="https://www.facebook.com/virgool.io">
+<meta property="article:published_time" content="2021-11-07 23:51:53">
+<meta property="article:modified_time" content="2021-11-11 19:33:28">
+<link rel="canonical" href="https://virgool.io/Novira/%D8%A2%D9%86%DA%86%D9%87-%D8%B3%D9%87-%D8%B3%D8%A7%D9%84-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%A7%D8%B2-%D8%B1%D8%A7%D9%87-%D8%A7%D8%B4%D8%AA%D8%A8%D8%A7%D9%87-%D8%A8%D9%87-%D9%85%D9%86-%D8%A2%D9%85%D9%88%D8%AE%D8%AA-u1fhbppkzgyp" />
+<link rel="author" href="https://virgool.io/Novira">
+<meta property="author" content="Arman">
+<meta property="og:image" content="https://files.virgool.io/upload/users/320812/posts/u1fhbppkzgyp/r5nf05t0xacx.jpeg">
+<meta name="twitter:image" content="https://files.virgool.io/upload/users/320812/posts/u1fhbppkzgyp/r5nf05t0xacx.jpeg">
+<meta name="twitter:image:alt" content="آنچه سه سال برنامه نویسی از راه اشتباه به من آموخت">
+<meta name="apple-mobile-web-app-status-bar-style" content="translucent" />
+<link rel="apple-touch-startup-image" href="https://virgool.io/images/pwa/ios/launch-640x1136.png?v=v2.6.9" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="https://virgool.io/images/pwa/ios/launch-750x1294.png?v=v2.6.9" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="https://virgool.io/images/pwa/ios/launch-1242x2148.png?v=v2.6.9" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="https://virgool.io/images/pwa/ios/launch-1125x2436.png?v=v2.6.9" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="https://virgool.io/images/pwa/ios/launch-1536x2048.png?v=v2.6.9" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="https://virgool.io/images/pwa/ios/launch-1668x2224.png?v=v2.6.9" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="https://virgool.io/images/pwa/ios/launch-2048x2732.png?v=v2.6.9" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel='stylesheet' type='text/css' href="https://virgool.io/dynamic-styles/Novira" />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5GS688K');</script>
+<style>.page_speed_926569869{ display:none;visibility:hidden } .page_speed_1736040465{ enable-background:new 0 0 492 492; } .page_speed_743814527{ stop-color:#107ABD } .page_speed_1090179564{ stop-color:#0658A5 } .page_speed_1548231880{ enable-background:new 0 0 510 510; } .page_speed_1524251902{ display: none; } .page_speed_198563647{ enable-background:new 0 0 512 512; }</style>
+</head>
+<body data-page-name="publication.internal" class="body-publication-internal     " data-login="1370114" data-app="production">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GS688K"
+   height="0" width="0" class="page_speed_926569869"></iframe></noscript>
+<section class="site-body">
+<div class="alert"></div>
+<header class="header">
+<section class="navbar js-navbar  ">
+<div class="pwa-navbar-section">
+<button class="js-pwa-back-button pwa-back-button">
+<svg width="20" x="0px" y="0px" viewBox="0 0 492 492" class="page_speed_1736040465">
+<path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12
+            C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084
+            c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864
+            l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z" />
+</svg>
+</button>
+</div>
+<section class="topbar">
+<div id="App_Search" class="App_Search">
+<div class="navbar-search" for="search--input">
+<div class="container">
+<span id="btn-close-search" class="btn-close-search">
+<svg width="14px" height="14px" viewBox="313 45 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<polygon id="Fill-2" stroke="none" fill="#AEAEAE" fill-rule="evenodd" points="326.999999 46.4099998 325.589999 45 320 50.5899998 314.41 45 313 46.4099998 318.59 51.9999996 313 57.5899993 314.41 58.9999992 320 53.4099993 325.589999 58.9999992 326.999999 57.5899993 321.409999 51.9999996"></polygon>
+</svg>
+</span>
+<form id="cse-search-box" action="https://virgool.io/search">
+<input class="search--input" type="text" autocomplete="off" name="q" placeholder="در بین مقالات، نویسندگان و… جستجو کنید" required />
+</form>
+</div>
+</div>
+</div>
+<div class="container">
+<section class="topbar-inner flexContainer" data-shorturl="https://vrgl.ir/5TDtJ" }}>
+<div class="navbar-block">
+<a href="https://virgool.io" class="navbar-logo">
+<svg width="35px" height="50px" viewBox="0 0 204 304">
+<style type="text/css">
+                    .st0{fill:url(#Shape_1_);}
+                    .st1{filter:url(#filter-3);}
+                    .st2{fill:#FFFFFF;}
+                  </style>
+<filter filterUnits="objectBoundingBox" height="200%" id="filter-3" width="200%" x="-50%" y="-50%">
+<feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+<feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1.5"></feGaussianBlur>
+<feColorMatrix in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"></feColorMatrix>
+</filter>
+<linearGradient id="Shape_1_" gradientUnits="userSpaceOnUse" x1="-892.5724" y1="1149.3007" x2="-891.5724" y2="1149.5884" gradientTransform="matrix(203.0965 0 0 -275.684 181280.5781 317044.6562)">
+<stop offset="0" class="page_speed_743814527"></stop>
+<stop offset="1" class="page_speed_1090179564"></stop>
+</linearGradient>
+<path id="Shape" class="st0" d="M100.2,303.7c-16.2-11.1-32.1-22-48.5-33.2c9.9-13.9,19.7-27.4,29-40.4
+                                        c-10.1-4.2-20.5-7.2-29.4-12.7c-35.1-21.5-54-52.6-51-94.4c3.1-43.4,26.3-73.9,66.5-88.4c67.8-24.4,125,23.1,134.4,75.5
+                                        c4.1,22.8,1.9,45.2-10.4,65.1c-12.4,20.1-26.2,39.4-39.8,58.7c-15.6,22-31.7,43.7-47.5,65.5C102.6,300.6,101.7,301.8,100.2,303.7z"></path>
+<g id="Fill-1" transform="translate(113.070063, 101.070415) rotate(210.000000) translate(-113.070063, -101.070415) ">
+<g class="st1">
+<path id="path-2_2_" d="M164.9,183.5c-11,0-21.8,0-32.9,0c0.2-9.5,0.4-49.1,0.6-58c-6,1.2-11.8,3.1-17.6,3.4
+                                              c-23,1.2-41.5-7.3-53.3-27.5c-12.3-21-11.2-42.5,2.8-61.8c23.6-32.7,65.1-28.8,85.9-7.6c9.1,9.2,15.2,20.3,15.7,33.4
+                                              c0.6,13.2,0.3,26.4,0.1,39.7"></path>
+</g>
+<g>
+<path id="path-2_1_" class="st2" d="M166.6,182.5c-11,0-21.8,0-32.9,0c0.2-9.5,0.4-49.1,0.6-58c-6,1.2-11.8,3.1-17.6,3.4
+                                              c-23,1.2-41.5-7.3-53.3-27.5c-12.3-21-11.2-42.5,2.8-61.8c23.6-32.7,65.1-28.8,85.9-7.6c9.1,9.2,15.2,20.3,15.7,33.4
+                                              c0.6,13.2,0.3,26.4,0.1,39.7"></path>
+</g>
+</g>
+</svg>
+</a>
+<a class="publication-logo" href=https://virgool.io/Novira>
+<img src="https://files.virgool.io/upload/publication/ntpwftp33dgt/ix1mv0.jpeg" alt="آبْیْ‌بَنَفْشْ" />
+</a>
+<div class="userLogin button">
+</div>
+</div>
+<div class="navbar-block userOption">
+<div id="open-search-bar" class="btn-search btn-icon button">
+<svg width="18px" height="18px" viewBox="221 44 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(221.000000, 44.000000)">
+<path d="M16.5322417,16.5322417 C15.9085639,17.1559194 14.8981422,17.1559194 14.2744645,16.5322417 L11.4567585,13.7145357 C10.2986516,14.4572116 8.92911048,14.9002672 7.45013359,14.9002672 C3.33619787,14.9002672 1.77635684e-15,11.5651318 1.77635684e-15,7.45013359 C1.77635684e-15,3.33513539 3.33619787,0 7.45013359,0 C11.5651318,0 14.9002672,3.33513539 14.9002672,7.45013359 C14.9002672,8.928048 14.4572116,10.2975891 13.7145357,11.4567585 L16.5322417,14.2744645 C17.1559194,14.8981422 17.1559194,15.9085639 16.5322417,16.5322417 L16.5322417,16.5322417 Z M7.45013359,2.12815425 C4.51130451,2.12815425 2.12815425,4.51024203 2.12815425,7.45013359 C2.12815425,10.3900252 4.51130451,12.7721129 7.45013359,12.7721129 C10.3889627,12.7721129 12.7721129,10.3900252 12.7721129,7.45013359 C12.7721129,4.51024203 10.3900252,2.12815425 7.45013359,2.12815425 L7.45013359,2.12815425 Z" id="Shape" fill="#AEAEAE" fill-rule="nonzero"></path>
+<path d="M16.5322417,16.5322417 C15.9085639,17.1559194 14.8981422,17.1559194 14.2744645,16.5322417 L11.4567585,13.7145357 C10.2986516,14.4572116 8.92911048,14.9002672 7.45013359,14.9002672 C3.33619787,14.9002672 1.77635684e-15,11.5651318 1.77635684e-15,7.45013359 C1.77635684e-15,3.33513539 3.33619787,0 7.45013359,0 C11.5651318,0 14.9002672,3.33513539 14.9002672,7.45013359 C14.9002672,8.928048 14.4572116,10.2975891 13.7145357,11.4567585 L16.5322417,14.2744645 C17.1559194,14.8981422 17.1559194,15.9085639 16.5322417,16.5322417 L16.5322417,16.5322417 Z M7.45013359,2.12815425 C4.51130451,2.12815425 2.12815425,4.51024203 2.12815425,7.45013359 C2.12815425,10.3900252 4.51130451,12.7721129 7.45013359,12.7721129 C10.3889627,12.7721129 12.7721129,10.3900252 12.7721129,7.45013359 C12.7721129,4.51024203 10.3900252,2.12815425 7.45013359,2.12815425 L7.45013359,2.12815425 Z" id="Shape-Copy" fill="#AEAEAE" fill-rule="nonzero"></path>
+</g>
+</svg>
+</div>
+<button data-react-action-name="toggle-notify" class="js-open-notify notify-button m-l-15 ">
+<svg x="0px" y="0px" width="20px" height="20px" viewBox="0 0 510 510" class="page_speed_1548231880" xml:space="preserve">
+<g id="notifications-none">
+<path d="M255,510c28.05,0,51-22.95,51-51H204C204,487.05,226.95,510,255,510z M420.75,357V216.75
+                              c0-79.05-53.55-142.8-127.5-160.65V38.25C293.25,17.85,275.4,0,255,0c-20.4,0-38.25,17.85-38.25,38.25V56.1
+                              c-73.95,17.85-127.5,81.6-127.5,160.65V357l-51,51v25.5h433.5V408L420.75,357z M369.75,382.5h-229.5V216.75
+                              C140.25,153,191.25,102,255,102s114.75,51,114.75,114.75V382.5z" />
+</g>
+</svg>
+</button>
+<div data-toggle="true" data-toggle-position="false" class="toggle toggle--big user-menus user-auth-menu toggle--border-none button">
+<div class="user--avatar">
+<img src="https://virgool.io/images/default-avatar.jpg" alt="">
+</div>
+<ul data-toggle="content" class="toggle-content user-menus-list">
+<li>
+<a href="https://virgool.io/@internationalistproletariat">
+کارگر انترناسیونالیست
+<span>مشاهده پروفایل</span>
+</a>
+</li>
+<hr>
+<li class="toggle--item"><a class="btn-text" href=https://virgool.io/post/create>نوشتن پست جدید</a></li>
+<li class="toggle--item"><a href="https://virgool.io/me/settings">تنظیمات حساب کاربری</a></li>
+<li class="toggle--item"><a href="https://virgool.io/posts/drafts">پست‌ها و پیش‌نویس‌ها</a></li>
+<li class="toggle--item flex--space-default has-badge-link">
+<a href="https://virgool.io/me/stats">مشاهده آمار</a>
+<a class="navbar--textLabel" href="https://virgool.io/me/promotions">افزایش بازدید</a>
+</li>
+<li class="toggle--item"><a href="https://virgool.io/me/interests">علاقه‌مندی‌های من</a></li>
+<li class="toggle--item"><a href="https://virgool.io/me/likes">پست‌های مورد علاقه</a></li>
+<li class="toggle--item"><a href="https://virgool.io/me/bookmarks">پست‌های ذخیره شده</a></li>
+<hr>
+<li class="toggle--item"><a href="https://virgool.io/me/publications">انتشارات</a></li>
+<hr>
+<li class="toggle--item"><a href="https://virgool.io/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">خروج</a></li>
+ </ul>
+<form id="logout-form" action="https://virgool.io/logout" method="POST" class="page_speed_1524251902">
+<input type="hidden" name="_token" value="0Lsy3eES77DpL803xb5UYZmunJslCKwITVdxmPam">
+</form>
+</div>
+</div>
+</section>
+</div>
+</section>
+</section>
+</header>
+<main id="app" class="site-main">
+<section class="page page-single page-">
+<section class="page-inner">
+<section class="page-content">
+<article class="single-container js-button-action " data-post-id="393732">
+<header class="author module">
+<div class="module--avatar">
+<a href="https://virgool.io/Novira/@armanvh0100">
+<img src="https://files.virgool.io/upload/users/320812/avatar/7dzmIy.jpeg?x-img=v1/resize,h_120,w_120/optimize,q_100" alt="Arman">
+</a>
+</div>
+<div class="module-info">
+<div class="module-header" data-user-id="320812">
+<a class="module--name" href="https://virgool.io/Novira/@armanvh0100">
+Arman
+</a>
+<button data-model="user" data-action-name="follow" data-identifier="vm5mgqwlzfnz" data-followsource-position="post_top" data-followsource-route="vm5mgqwlzfnz" class="btn btn-follow btn-sm btn-rounded ">
+</button>
+</div>
+<p class="module--bio js--linkify">TATAKAE!</p>
+<div class="module-footer">
+<span class="data">۴ هفته پیش</span>
+/
+<span class="time">خواندن ۴ دقیقه</span>
+</div>
+</div>
+</header>
+<input type="hidden" id="log_id" name="log_id" value="q3eEvd9delg3cZcV9Adm">
+<input type="hidden" id="log_code" name="log_code" value="$2y$10$as23c0LGkh/fRMLChIKChOa.TXvhhj9JxAcbll8aRNI.UJsPKVzji">
+<div class="post-content article-content">
+<h1>آنچه سه سال برنامه نویسی از راه اشتباه به من آموخت</h1>
+<div class="post-body renderEditorData">
+<figure class="md-block-image"><img src="https://files.virgool.io/upload/users/320812/posts/u1fhbppkzgyp/r5nf05t0xacx.jpeg" alt="" /></figure><p class="md-block-unstyled">خیلی غم انگیزه که دارم این پست رو مینویسم چون دوسال پیش هم همچین پستی نوشتم و از اشتباهاتی که توی یک سال اول کردم رو گفتم و قرار بود دوباره تکرارشون نکنم. (آه غمگین) ولی خب زندگی همینه. من آرمانم، با سه سال تجربه کار با زبان های مختلف (جاوا/تایپ اسکریپت - پایتون - rust) ، بدون شغل و حتی یک عدد پروژه تکمیل شده، و دارم این پست رو مینویسم که مثل من نشید:)</p><h4 class="md-block-header-four">زیادی سردرگم بودم</h4><p class="md-block-unstyled">از یک سال و نیم پیش زندگی من به دو بخش برنامه نویسی و خواب تقسیم میشه. روزی ۸ ساعت یا حتی ۱۰ ساعت (حداقل بیشتر روز ها). قبلش بیشتر تفریحی برنامه نویسی میکردم ولی کنکورم رو که دادم و فهمیدم که آدم درس خوندن نیستم خیلی جدی تر ادامه دادم. با ++c شروع کردم، بعد جاوا و اندروید بعد کاتلین بعد پایتون و درنهایت جاوااسکریپت و تایپ اسکریپت و جدیدا Rust! میبینین! خیلی چیز هارو امتحان کردم ولی در نهایت به این نتیجه رسیدم که باید فرانت‌اند کارکنم. ولی خب سمت بد اند و node.js هم کشیده شدم. فریم‌ورک ها و کتابخانه های بیشماری رو امتحان کردم. هرچی که فکرش رو بکنید. از graphql بگیر تا websocket. علاوه بر اینها چیز های دیگه رو هم امتحان کردم. از داکر و kubernetes بگیر تا ماکروسرویس ها و webpack و ... </p><p class="md-block-unstyled">یه مدت هم با پایتون و جنگو سر و کار داشتم و حتی سراغ php و لاراول هم رفتم!</p><p class="md-block-unstyled">البته بیشتر اینهارو فقط درحد &quot;آشنایی&quot; بلدم و خیلی هارو هم کلا یادم رفته ولی خب برای یک سال خییلی زیاده. اصلا نمیدونم چطور این همه وقت گیر آوردم.</p><p class="md-block-unstyled">ولی میدونید اگر از اول شروع میکردم سراغ چی میرفتم؟ وردپرس! چون من هدف نهاییم فریلنسر شدن بود و پروژه های وردپرس از در و دیوار داره میاد و دونستنش ارزش بیشتری نسبت به Rract.js برام داشت. از یادگیری ری‌اکت پشیمون نیستم ولی باید روی چیز دیگه ای وقت میگذاشتم. فهمیدن اینکه در نهایت میخواید توی چه زمینه ای کار کنید خیلی سخت نیست. حتی اگر میخواستید مثلا زبان های مختلف رو امتحان کنید نیاز نیست چندین فریمورک رو باهم یاد بگیرید.</p><h4 class="md-block-header-four">زبان انگلیسی رو دست کم گرفتم</h4><p class="md-block-unstyled">زبانم بدک نیست. همیشه جوابگو نیاز هام بوده و نهایتش یکم از گوگل ترنسلیت کمک میگرفتم. مخصوصا مهارت های شنیداریم خیلی خوبه. به همین راضی بودم و تلاشی برای بهتر کردنش نکردم.</p><p class="md-block-unstyled">اشتباه میکردم. اگر از اول شروع میکردم روزی حداقل یک ساعت رو فقط به زبان اختصاص میدادم در حدی که بتونم خیلی روون حرف بزنم و ارتباط برقرار کنم. این خیلی تاثیر داره روی موقعیت هایی که در آینده میتونم به دست بیارم. مخصوصا اگر قصد فریلنسر شدن داشته باشید با دونستن زبان میتونید توی سایت های خارجی کار کنید و پول پارو کنید:)</p><p class="md-block-unstyled">میدونم که اهمیت زبان رو میدونید ولی باید خیلی بیشتر جدیش بگیرید</p><h4 class="md-block-header-four">گیتهاب رو دیر شناختم</h4><p class="md-block-unstyled">بعد از گوگل به نظرم بهترین دوست یه برنامه نویس گیتهابه. من خیلی دیر گیتهاب رو شناختم. تا مدت ها گیتهاب رو به دید سایتی که بقیه کد هاشون رو میگذارن توش نگاه میکردم. ولی از وقتی فهمیدم میشه کد هارو خوند زندگیم عوض شد:) چیز هایی که با خوندن کد های بقیه یاد میگیرم توی هیچ دوره و سایتی نمیتونم یاد بگیرم. لازم هم نیست کد رو متوجه بشم. حتی فقط دیدنش هم میتونه آموزنده باشه.</p><p class="md-block-unstyled">کافیه یه حساب بسازید (که احتمالا دارید) و هر کدی که مینویسید رو بگذارید توی گیتهاب. هر از چند گاهی نگاهی به بخش trending گیتهاب بندازید و پروژه هایی که به نظرتون رو جلب کرد رو سیو کنید. بعدا حتما یه نگاه بهش بندازید و سعی کنید از هر بخشی که بهش علاقه دارید یاد بگیرید. در همین حین ممکنه توی کد به یا اشتباهاتی هم بر بخورید که میشه نقطه شروعتون برای مشارکت توی پروژه های اپن سورس. اولین مشارکت منم همین شکلی بود. باور کنید زندگیتون رو تغییر میده.</p><h4 class="md-block-header-four">پروژه هام رو نیمه کاره رها کردم</h4><p class="md-block-unstyled">چیزی که خیلی اذیتم میکنه اینه هیچ پروژه ای برای نشون دادن به بقیه ندارم. بقیه که نمیدونن من کلی با یه فریمورک کار کردم و اهمیت هم نمیدن. چیزی که توانایی هام رو به بقیه نشون میده پروژه هایی هست که ساختم. من در مقاطع مختلف سعی کردم پروژه های بسازم که این جای خالی رو برام پر کنه ولی همیشه ناتموم مونده. مهم ترین عواملش اینها بوده:</p><ul class="md-block-unordered-list-item"><li>پروژه خیلی سختی رو انتخاب کردم</li><li>خیلی کمالگرا بودم</li><li>اینقدر روی بخش های کم اهمیت وقت گذاشتم که انگیزم رو از دست دادم</li></ul><p class="md-block-unstyled">هر چیزی که یاد میگیرید، حتما حتما حتما یه پروژه متوسط و در حد توانتون برای خودتون تعریف کنید و به هر قیمتی شده تمومش کنید. مهم نیست چقدر بزرگ باشه، مهم نیست چقدر تمیز باشه، مهم نیست چقدر استاندارد ها توش رعایت شده باشه، فقط تمومش کنید. بعدا میتونید بهترش کنید. کوچک ترین پروژه هاتون بعدا به نمونه کار های خوبی تبدیل میشه که میتونید باهاش توانایی هاتون رو نشون بدید.</p><p class="md-block-unstyled"><br /></p><hr class="md-block-hr" /><p class="md-block-unstyled">حرفای اصلی که میخواستم بزنم همین بود. اگر تازه شروع کردید نصیحت هایی که توی پستی که دو سال پیش نوشتم بیشتر به دردتون میخوره. اون پست رو توی یه اکانت دیگه نوشتم. سعی میکنم پیداش کنم و دوباره توی همین اکانت بازنشر بدم.</p><p class="md-block-unstyled">موفق باشید</p>
+</div>
+</div>
+<div class="sidebar-post-actions">
+<div class="sidebar-post-actions-container">
+<div class="sidebar-post-actions-inner">
+<div class="action-buttons">
+<div class="action-buttons-item">
+<div class="sidebar-actions-publicationInfo">
+<h2 class="tableCell--name">
+<a href="https://virgool.io/Novira" title="برو به انتشارات آبْیْ‌بَنَفْشْ">آبْیْ‌بَنَفْشْ</a>
+</h2>
+<p class="tableCell--bio js--linkify">فیلم، سریال، انیمیشن، گیم، کتاب و…</p>
+<button data-model="publication" data-action-name="follow" data-identifier="ntpwftp33dgt" data-followsource-position="publication-post" data-followsource-route="u1fhbppkzgyp" class="btn btn-action-toggle follows btn-sm m-t-10 ">
+</button>
+</div>
+</div>
+<div class="btn-action action-buttons-item">
+<button data-model="post" data-action-name="like" data-identifier=u1fhbppkzgyp class="btn-like js-like ">
+<div class="heart">
+<svg class="icon svg stroke" width="24" height="24" viewBox="0 0 24 24">
+<path d="M12 21.328l-1.453-1.313c-5.156-4.688-8.531-7.734-8.531-11.531 0-3.094 2.391-5.484 5.484-5.484 1.734 0 3.422 0.844 4.5 2.109 1.078-1.266 2.766-2.109 4.5-2.109 3.094 0 5.484 2.391 5.484 5.484 0 3.797-3.375 6.891-8.531 11.578z"></path>
+</svg>
+</div>
+</button>
+<a href="https://virgool.io/Novira/%D8%A2%D9%86%DA%86%D9%87-%D8%B3%D9%87-%D8%B3%D8%A7%D9%84-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%A7%D8%B2-%D8%B1%D8%A7%D9%87-%D8%A7%D8%B4%D8%AA%D8%A8%D8%A7%D9%87-%D8%A8%D9%87-%D9%85%D9%86-%D8%A2%D9%85%D9%88%D8%AE%D8%AA-u1fhbppkzgyp/likes" class="iconLabel js-action-counter" rel="nofollow">
+۲۱۶
+</a>
+</div>
+<button data-model="post" data-action-name="bookmark" data-identifier="u1fhbppkzgyp" class="btn-action btn-bookmark action-buttons-item ">
+<svg class="icon svg stroke" width="24" height="24" viewBox="0 0 24 24">
+<path d="M17.016 3c1.078 0 1.969 0.938 1.969 2.016v15.984l-6.984-3-6.984 3v-15.984c0-1.078 0.891-2.016 1.969-2.016h10.031z"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+<footer class="single-post-footer js-postfooter">
+<div class="post-tags">
+<ul>
+</ul>
+</div>
+<div class="post-actions">
+<div class="post-action-buttons">
+<div data-toggle="true" data-action-model="post" class="toggle toggle--top toggle--small toggle--arrow-center is-mobile pos--right btn-action btn-more">
+<svg width="30" height="25" viewBox="0 0 512 512" class="page_speed_198563647" xml:space="preserve">
+<path d="M256,192c-35.292,0-64,28.708-64,64s28.708,64,64,64s64-28.708,64-64S291.292,192,256,192z M256,298.667
+            c-23.521,0-42.667-19.135-42.667-42.667s19.146-42.667,42.667-42.667s42.667,19.135,42.667,42.667S279.521,298.667,256,298.667z" />
+<path d="M448,192c-35.292,0-64,28.708-64,64s28.708,64,64,64c35.292,0,64-28.708,64-64S483.292,192,448,192z M448,298.667
+            c-23.521,0-42.667-19.135-42.667-42.667s19.146-42.667,42.667-42.667c23.521,0,42.667,19.135,42.667,42.667
+            S471.521,298.667,448,298.667z" />
+<path d="M64,192c-35.292,0-64,28.708-64,64s28.708,64,64,64s64-28.708,64-64S99.292,192,64,192z M64,298.667
+            c-23.521,0-42.667-19.135-42.667-42.667S40.479,213.333,64,213.333s42.667,19.135,42.667,42.667S87.521,298.667,64,298.667z" />
+</svg>
+<ul data-toggle="content" data-toggle-click="off" class="toggle-content">
+<li class="toggle--item" data-modal-name="post-report" data-model="post" data-identifier=u1fhbppkzgyp>گزارش تخلف</li>
+<li class="toggle--item" data-modal-name="user-block" data-model="user" data-identifier="vm5mgqwlzfnz">بلاک کاربر</span></li>
+</ul>
+</div>
+<button data-model="post" data-action-name="bookmark" data-identifier="u1fhbppkzgyp" class="btn-action btn-bookmark ">
+<svg class="icon svg stroke" width="24" height="24" viewBox="0 0 24 24">
+<path d="M17.016 3c1.078 0 1.969 0.938 1.969 2.016v15.984l-6.984-3-6.984 3v-15.984c0-1.078 0.891-2.016 1.969-2.016h10.031z"></path>
+</svg>
+</button>
+<div class="btn-action">
+<button data-model="post" data-action-name="like" data-identifier="u1fhbppkzgyp" class="btn-like js-like ">
+<div class="heart">
+<svg class="icon svg stroke" width="24" height="24" viewBox="0 0 24 24">
+<path d="M12 21.328l-1.453-1.313c-5.156-4.688-8.531-7.734-8.531-11.531 0-3.094 2.391-5.484 5.484-5.484 1.734 0 3.422 0.844 4.5 2.109 1.078-1.266 2.766-2.109 4.5-2.109 3.094 0 5.484 2.391 5.484 5.484 0 3.797-3.375 6.891-8.531 11.578z"></path>
+</svg>
+</div>
+</button>
+<a href="https://virgool.io/Novira/%D8%A2%D9%86%DA%86%D9%87-%D8%B3%D9%87-%D8%B3%D8%A7%D9%84-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%A7%D8%B2-%D8%B1%D8%A7%D9%87-%D8%A7%D8%B4%D8%AA%D8%A8%D8%A7%D9%87-%D8%A8%D9%87-%D9%85%D9%86-%D8%A2%D9%85%D9%88%D8%AE%D8%AA-u1fhbppkzgyp/likes" class="iconLabel js-action-counter" rel="nofollow">
+۲۱۶
+</a>
+</div>
+<button class="btn-action btn-comment js-btn-comment">
+<svg class="icon svg stroke" width="21px" height="21px" viewBox="25 7 18 18">
+<path d="M35.6875,7 L32.3125,7 C28.27375,7 25,10.27375 25,14.3125 C25,16.92925 26.3854375,19.2079375 28.4520625,20.5 L28.375,20.5 L28.375,25 L33.4375,21.625 L35.6875,21.625 C39.72625,21.625 43,18.35125 43,14.3125 C43,10.27375 39.72625,7 35.6875,7 Z M35.7750243,19.5499022 L33.4083577,19.5499022 L30.4500244,21.3249022 L30.4500244,19.2238939 C28.3862911,18.4902272 26.9000244,16.5395022 26.9000244,14.2249023 C26.9000244,11.2837273 29.2838494,8.89990234 32.2250243,8.89990234 L35.7750243,8.89990234 C38.7161993,8.89990234 41.1000242,11.2837273 41.1000242,14.2249023 C41.1000242,17.1660772 38.7161993,19.5499022 35.7750243,19.5499022 Z"></path>
+</svg>
+<span class="iconLabel">۸۲ نظر</span>
+</button>
+</div>
+<div class="share-buttons">
+<a href="#" title="اشتراک گذاری در تلگرام" data-social="telegram" data-url="https://vrgl.ir/5TDtJ" class="btn telegram-share share">
+<svg width="24" height="24" viewBox="0 0 300 300">
+<path id="XMLID_497_" d="M36.5,145.8L90.7,166l21,67.5c1.3,4.3,6.6,5.9,10.1,3.1l30.2-24.6c3.2-2.6,7.7-2.7,11-0.3l54.5,39.6
+            c3.8,2.7,9.1,0.7,10-3.9l39.9-192.1c1-5-3.8-9.1-8.6-7.3L36.4,133.8C30.9,136,31,143.7,36.5,145.8z M108.3,155.3l106-65.3
+            c1.9-1.2,3.9,1.4,2.2,2.9l-87.5,81.3c-3.1,2.9-5.1,6.7-5.6,10.8l-3,22.1c-0.4,2.9-4.5,3.2-5.3,0.4l-11.5-40.3
+            C102.4,162.7,104.3,157.8,108.3,155.3z" />
+</svg>
+</a>
+<a class="btn twitter-share share" href="#" title="اشتراک گذاری در توئیتر" data-social="twitter" data-url="https://vrgl.ir/5TDtJ">
+<svg width="24" height="24" viewBox="0 0 24 24">
+<path d="M18.89 7.012c0.808-0.496 1.343-1.173 1.605-2.034-0.786 0.417-1.569 0.703-2.351 0.861-0.703-0.756-1.593-1.14-2.66-1.14-1.043 0-1.924 0.366-2.643 1.078-0.715 0.717-1.076 1.588-1.076 2.605 0 0.309 0.039 0.585 0.117 0.819-3.076-0.105-5.622-1.381-7.628-3.837-0.34 0.601-0.51 1.213-0.51 1.846 0 1.301 0.549 2.332 1.645 3.089-0.625-0.053-1.176-0.211-1.645-0.47 0 0.929 0.273 1.705 0.82 2.388 0.549 0.676 1.254 1.107 2.115 1.291-0.312 0.080-0.641 0.118-0.979 0.118-0.312 0-0.533-0.026-0.664-0.083 0.23 0.757 0.664 1.371 1.291 1.841 0.625 0.472 1.344 0.721 2.152 0.743-1.332 1.045-2.855 1.562-4.578 1.562-0.422 0-0.721-0.006-0.902-0.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-0.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974 0.784-1.564 1.172-3.192 1.172-4.892v-0.468c0.758-0.57 1.371-1.212 1.84-1.921-0.68 0.293-1.383 0.492-2.11 0.593z"></path>
+</svg>
+</a>
+<div data-action="copy" class="shorturl-input">
+<svg width="20" height="20" viewBox="0 0 24 24">
+<path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path>
+</svg>
+<span class="shorturl-text">https://vrgl.ir/5TDtJ</span>
+</div>
+</div>
+</div>
+<div class="section-follow m-t-20">
+<div class="section-follow-item ">
+<div class="u-avatar u-avatar--small">
+<a href="https://virgool.io/Novira/@armanvh0100" title="برو به پروفایل Arman">
+<img class="u-avatar-image" src="https://files.virgool.io/upload/users/320812/avatar/7dzmIy.jpeg?x-img=v1/resize,h_120,w_120/optimize,q_100" alt="برو به پروفایل Arman">
+</a>
+</div>
+<div class="tableCell p-r-15">
+<div class="tableCell-header">
+<h5 class="tableCell--name">
+<a href="https://virgool.io/Novira/@armanvh0100" property="cc:attributionName" title="برو به پروفایل Arman">Arman</a>
+</h5>
+<button data-model="user" data-action-name="follow" data-identifier="vm5mgqwlzfnz" data-followsource-position="post_bottom" data-followsource-route="u1fhbppkzgyp" class="btn btn-action-toggle follows btn-sm ">
+</button>
+</div>
+<p class="tableCell--bio js--linkify">TATAKAE!</p>
+</div>
+</div>
+<div class="section-follow-item">
+<div class="u-avatar u-avatar--small">
+<a href="https://virgool.io/Novira" title="برو به انتشارات آبْیْ‌بَنَفْشْ">
+<img class="u-avatar-image" src="https://files.virgool.io/upload/publication/ntpwftp33dgt/ix1mv0.jpeg?x-img=v1/resize,h_120,w_120/optimize,q_100" alt="برو به انتشارات آبْیْ‌بَنَفْشْ">
+</a>
+</div>
+<div class="tableCell p-r-15">
+<div class="tableCell-header">
+<h5 class="tableCell--name">
+<a href="https://virgool.io/Novira" title="برو به انتشارات آبْیْ‌بَنَفْشْ">آبْیْ‌بَنَفْشْ</a>
+</h5>
+<button data-model="publication" data-action-name="follow" data-identifier="ntpwftp33dgt" data-followsource-position="publication-post" data-followsource-route="u1fhbppkzgyp" class="btn btn-action-toggle follows btn-sm ">
+</button>
+</div>
+<p class="tableCell--bio js--linkify">فیلم، سریال، انیمیشن، گیم، کتاب و هر چیزی که برای فرار از این دنیا و یا بهتر کردن این دنیا ممکنه لازم باشن! انتشار پست تو آبی بنفش:https://vrgl.ir/vEBd9</p>
+</div>
+</div>
+</div>
+</footer>
+<div class="footerPostSticky post-actions is-publication">
+<div class="footerContainer hidden-xs">
+<div class="post-action-buttons">
+<div data-toggle="true" data-action-model="post" class="toggle toggle--top toggle--small toggle--arrow-center is-mobile pos--right btn-action btn-more">
+<svg width="30" height="25" viewBox="0 0 512 512" class="page_speed_198563647" xml:space="preserve">
+<path d="M256,192c-35.292,0-64,28.708-64,64s28.708,64,64,64s64-28.708,64-64S291.292,192,256,192z M256,298.667
+            c-23.521,0-42.667-19.135-42.667-42.667s19.146-42.667,42.667-42.667s42.667,19.135,42.667,42.667S279.521,298.667,256,298.667z" />
+<path d="M448,192c-35.292,0-64,28.708-64,64s28.708,64,64,64c35.292,0,64-28.708,64-64S483.292,192,448,192z M448,298.667
+            c-23.521,0-42.667-19.135-42.667-42.667s19.146-42.667,42.667-42.667c23.521,0,42.667,19.135,42.667,42.667
+            S471.521,298.667,448,298.667z" />
+<path d="M64,192c-35.292,0-64,28.708-64,64s28.708,64,64,64s64-28.708,64-64S99.292,192,64,192z M64,298.667
+            c-23.521,0-42.667-19.135-42.667-42.667S40.479,213.333,64,213.333s42.667,19.135,42.667,42.667S87.521,298.667,64,298.667z" />
+</svg>
+<ul data-toggle="content" data-toggle-click="off" class="toggle-content">
+<li class="toggle--item" data-modal-name="post-report" data-model="post" data-identifier=u1fhbppkzgyp>گزارش تخلف</li>
+<li class="toggle--item" data-modal-name="user-block" data-model="user" data-identifier="vm5mgqwlzfnz">بلاک کاربر</span></li>
+</ul>
+</div>
+<button data-model="post" data-action-name="bookmark" data-identifier="u1fhbppkzgyp" class="btn-action btn-bookmark ">
+<svg class="icon svg stroke" width="24" height="24" viewBox="0 0 24 24">
+<path d="M17.016 3c1.078 0 1.969 0.938 1.969 2.016v15.984l-6.984-3-6.984 3v-15.984c0-1.078 0.891-2.016 1.969-2.016h10.031z"></path>
+</svg>
+</button>
+<div class="btn-action">
+<button data-model="post" data-action-name="like" data-identifier="u1fhbppkzgyp" class="btn-like js-like ">
+<div class="heart">
+<svg class="icon svg stroke" width="24" height="24" viewBox="0 0 24 24">
+<path d="M12 21.328l-1.453-1.313c-5.156-4.688-8.531-7.734-8.531-11.531 0-3.094 2.391-5.484 5.484-5.484 1.734 0 3.422 0.844 4.5 2.109 1.078-1.266 2.766-2.109 4.5-2.109 3.094 0 5.484 2.391 5.484 5.484 0 3.797-3.375 6.891-8.531 11.578z"></path>
+</svg>
+</div>
+</button>
+<a href="https://virgool.io/Novira/%D8%A2%D9%86%DA%86%D9%87-%D8%B3%D9%87-%D8%B3%D8%A7%D9%84-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%A7%D8%B2-%D8%B1%D8%A7%D9%87-%D8%A7%D8%B4%D8%AA%D8%A8%D8%A7%D9%87-%D8%A8%D9%87-%D9%85%D9%86-%D8%A2%D9%85%D9%88%D8%AE%D8%AA-u1fhbppkzgyp/likes" class="iconLabel js-action-counter" rel="nofollow">
+۲۱۶
+</a>
+</div>
+<button class="btn-action btn-comment js-btn-comment">
+<svg class="icon svg stroke" width="21px" height="21px" viewBox="25 7 18 18">
+<path d="M35.6875,7 L32.3125,7 C28.27375,7 25,10.27375 25,14.3125 C25,16.92925 26.3854375,19.2079375 28.4520625,20.5 L28.375,20.5 L28.375,25 L33.4375,21.625 L35.6875,21.625 C39.72625,21.625 43,18.35125 43,14.3125 C43,10.27375 39.72625,7 35.6875,7 Z M35.7750243,19.5499022 L33.4083577,19.5499022 L30.4500244,21.3249022 L30.4500244,19.2238939 C28.3862911,18.4902272 26.9000244,16.5395022 26.9000244,14.2249023 C26.9000244,11.2837273 29.2838494,8.89990234 32.2250243,8.89990234 L35.7750243,8.89990234 C38.7161993,8.89990234 41.1000242,11.2837273 41.1000242,14.2249023 C41.1000242,17.1660772 38.7161993,19.5499022 35.7750243,19.5499022 Z"></path>
+</svg>
+<span class="iconLabel">۸۲ نظر</span>
+</button>
+</div>
+<div class="share-buttons">
+<a href="#" title="اشتراک گذاری در تلگرام" data-social="telegram" data-url="https://vrgl.ir/5TDtJ" class="btn telegram-share share">
+<svg width="24" height="24" viewBox="0 0 300 300">
+<path id="XMLID_497_" d="M36.5,145.8L90.7,166l21,67.5c1.3,4.3,6.6,5.9,10.1,3.1l30.2-24.6c3.2-2.6,7.7-2.7,11-0.3l54.5,39.6
+            c3.8,2.7,9.1,0.7,10-3.9l39.9-192.1c1-5-3.8-9.1-8.6-7.3L36.4,133.8C30.9,136,31,143.7,36.5,145.8z M108.3,155.3l106-65.3
+            c1.9-1.2,3.9,1.4,2.2,2.9l-87.5,81.3c-3.1,2.9-5.1,6.7-5.6,10.8l-3,22.1c-0.4,2.9-4.5,3.2-5.3,0.4l-11.5-40.3
+            C102.4,162.7,104.3,157.8,108.3,155.3z" />
+</svg>
+</a>
+<a class="btn twitter-share share" href="#" title="اشتراک گذاری در توئیتر" data-social="twitter" data-url="https://vrgl.ir/5TDtJ">
+<svg width="24" height="24" viewBox="0 0 24 24">
+<path d="M18.89 7.012c0.808-0.496 1.343-1.173 1.605-2.034-0.786 0.417-1.569 0.703-2.351 0.861-0.703-0.756-1.593-1.14-2.66-1.14-1.043 0-1.924 0.366-2.643 1.078-0.715 0.717-1.076 1.588-1.076 2.605 0 0.309 0.039 0.585 0.117 0.819-3.076-0.105-5.622-1.381-7.628-3.837-0.34 0.601-0.51 1.213-0.51 1.846 0 1.301 0.549 2.332 1.645 3.089-0.625-0.053-1.176-0.211-1.645-0.47 0 0.929 0.273 1.705 0.82 2.388 0.549 0.676 1.254 1.107 2.115 1.291-0.312 0.080-0.641 0.118-0.979 0.118-0.312 0-0.533-0.026-0.664-0.083 0.23 0.757 0.664 1.371 1.291 1.841 0.625 0.472 1.344 0.721 2.152 0.743-1.332 1.045-2.855 1.562-4.578 1.562-0.422 0-0.721-0.006-0.902-0.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-0.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974 0.784-1.564 1.172-3.192 1.172-4.892v-0.468c0.758-0.57 1.371-1.212 1.84-1.921-0.68 0.293-1.383 0.492-2.11 0.593z"></path>
+</svg>
+</a>
+<div data-action="copy" class="shorturl-input">
+<svg width="20" height="20" viewBox="0 0 24 24">
+<path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path>
+</svg>
+<span class="shorturl-text">https://vrgl.ir/5TDtJ</span>
+</div>
+</div>
+</div>
+<div class="like-btn-only-xs">
+<div class="btn-action">
+<button data-model="post" data-action-name="like" data-identifier="u1fhbppkzgyp" class="btn-like js-like ">
+<div class="heart">
+<svg class="icon svg stroke" width="24" height="24" viewBox="0 0 24 24">
+<path d="M12 21.328l-1.453-1.313c-5.156-4.688-8.531-7.734-8.531-11.531 0-3.094 2.391-5.484 5.484-5.484 1.734 0 3.422 0.844 4.5 2.109 1.078-1.266 2.766-2.109 4.5-2.109 3.094 0 5.484 2.391 5.484 5.484 0 3.797-3.375 6.891-8.531 11.578z"></path>
+</svg>
+</div>
+</button>
+<a href="https://virgool.io/Novira/%D8%A2%D9%86%DA%86%D9%87-%D8%B3%D9%87-%D8%B3%D8%A7%D9%84-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%A7%D8%B2-%D8%B1%D8%A7%D9%87-%D8%A7%D8%B4%D8%AA%D8%A8%D8%A7%D9%87-%D8%A8%D9%87-%D9%85%D9%86-%D8%A2%D9%85%D9%88%D8%AE%D8%AA-u1fhbppkzgyp/likes" class="iconLabel js-action-counter" rel="nofollow">
+۲۱۶
+</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<script>
+  window.extraPostData = {
+    hash: 'u1fhbppkzgyp'
+  }
+</script>
+</section>
+</section>
+<section class="comments" id="comments">
+<div class="container">
+<div class="post-suggestion">
+<div class="section--title">شاید از این نوشته‌ها هم خوشتان بیاید</div>
+<div class="row">
+<div class=" postItem js-button-action">
+<div class="postItemContent">
+<a href="https://virgool.io/Novira/%D9%85%D8%B3%DB%8C%D8%B1%DB%8C-%DA%A9%D9%87-%D8%A7%D9%88%D9%84%D8%A7%DB%8C-%D8%B1%D8%A7%D9%87-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%B2%D8%A8%D8%A7%D9%86-%D8%A2%D9%85%D9%88%D8%B2%DB%8C-%D9%85%DB%8C%D8%B4%D9%87-%D9%BE%DB%8C%D8%B4-%DA%AF%D8%B1%D9%81%D8%AA-egb21zixrz4p?source=grid_footer_post-----0-44">
+<div class="postItem--photo">
+<img class="post--cover" src="https://files.virgool.io/upload/users/354213/posts/egb21zixrz4p/gznerq1ah23o.jpeg?x-img=v1/resize,w_300/optimize,q_100" alt="مسیری که اولای راه برای زبان آموزی میشه پیش گرفت...🤔">
+</div>
+</a>
+<div class="postItem-body">
+<a href="https://virgool.io/Novira/%D9%85%D8%B3%DB%8C%D8%B1%DB%8C-%DA%A9%D9%87-%D8%A7%D9%88%D9%84%D8%A7%DB%8C-%D8%B1%D8%A7%D9%87-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%B2%D8%A8%D8%A7%D9%86-%D8%A2%D9%85%D9%88%D8%B2%DB%8C-%D9%85%DB%8C%D8%B4%D9%87-%D9%BE%DB%8C%D8%B4-%DA%AF%D8%B1%D9%81%D8%AA-egb21zixrz4p?source=grid_footer_post-----0-44">
+<p class="suggest-type">
+مطلبی دیگر از این انتشارات
+</p>
+<h5 class="postItem--title">
+مسیری که اولای راه برای زبان آموزی میشه پیش گرفت...🤔
+</h5>
+</a>
+<div class="postItem-footer">
+<a href="https://virgool.io/@Saba1" class="userInfo">
+<div class="avatar">
+<img src="https://files.virgool.io/upload/users/354213/avatar/YEkYhS.jpeg?x-img=v1/resize,h_120,w_120/optimize,q_100" alt="سـبا">
+</div>
+<div class="more">
+<span class="name">سـبا</span>
+<time class="readTime">خواندن ۵ دقیقه</time>
+</div>
+</a>
+<button data-model="post" data-action-name="bookmark" data-identifier="egb21zixrz4p" class="btn-bookmark js-bookmark ">
+<svg class="icon-svg iconSvg-style" width="24" height="24" viewBox="0 0 24 24">
+<path d="M17.016 3c1.078 0 1.969 0.938 1.969 2.016v15.984l-6.984-3-6.984 3v-15.984c0-1.078 0.891-2.016 1.969-2.016h10.031z"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class=" postItem js-button-action">
+<div class="postItemContent">
+<a href="https://virgool.io/Novira/%D9%85%D9%86-%D8%A2%D8%AA%D9%86%D8%A7-%D9%87%D8%B3%D8%AA%D9%85-%D8%A7%D8%B2-%D8%AC%D8%A7%D9%85%D8%B9%D9%87-%D9%88-%D9%85%D8%AD%DB%8C%D8%B7-%D8%A7%D8%B7%D8%B1%D8%A7%D9%81%D9%85-fl1u6nd3yp5g?source=grid_footer_post-----1-44">
+<div class="postItem--photo">
+<img class="post--cover" src="https://files.virgool.io/upload/users/73068/posts/fl1u6nd3yp5g/qkzkzmkv6f0r.jpeg?x-img=v1/resize,w_300/optimize,q_100" alt="من آتنا هستم؛ از جامعه و محیط اطرافم!">
+</div>
+</a>
+<div class="postItem-body">
+<a href="https://virgool.io/Novira/%D9%85%D9%86-%D8%A2%D8%AA%D9%86%D8%A7-%D9%87%D8%B3%D8%AA%D9%85-%D8%A7%D8%B2-%D8%AC%D8%A7%D9%85%D8%B9%D9%87-%D9%88-%D9%85%D8%AD%DB%8C%D8%B7-%D8%A7%D8%B7%D8%B1%D8%A7%D9%81%D9%85-fl1u6nd3yp5g?source=grid_footer_post-----1-44">
+<p class="suggest-type">
+مطلبی دیگر از این انتشارات
+</p>
+<h5 class="postItem--title">
+من آتنا هستم؛ از جامعه و محیط اطرافم!
+</h5>
+</a>
+<div class="postItem-footer">
+<a href="https://virgool.io/@Kalegerdali" class="userInfo">
+<div class="avatar">
+<img src="https://files.virgool.io/upload/users/73068/avatar/KVBPiz.jpeg?x-img=v1/resize,h_120,w_120/optimize,q_100" alt="آتنا مهرانفر">
+</div>
+<div class="more">
+<span class="name">آتنا مهرانفر</span>
+<time class="readTime">خواندن ۸ دقیقه</time>
+</div>
+</a>
+<button data-model="post" data-action-name="bookmark" data-identifier="fl1u6nd3yp5g" class="btn-bookmark js-bookmark ">
+<svg class="icon-svg iconSvg-style" width="24" height="24" viewBox="0 0 24 24">
+<path d="M17.016 3c1.078 0 1.969 0.938 1.969 2.016v15.984l-6.984-3-6.984 3v-15.984c0-1.078 0.891-2.016 1.969-2.016h10.031z"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class=" postItem js-button-action">
+<div class="postItemContent">
+<a href="https://virgool.io/Novira/day-of-the-programmer-lhadmumbmgbk?source=grid_footer_post-----2-44">
+<div class="postItem--photo">
+<img class="post--cover" src="https://files.virgool.io/upload/users/2800/posts/lhadmumbmgbk/t8wv7jmgzfco.png?x-img=v1/resize,w_300/optimize,q_100" alt="از المپیاد زیست تا ++Turbo C - داستان برنامه‌نویس شدنم">
+</div>
+</a>
+<div class="postItem-body">
+<a href="https://virgool.io/Novira/day-of-the-programmer-lhadmumbmgbk?source=grid_footer_post-----2-44">
+<p class="suggest-type">
+مطلبی دیگر از این انتشارات
+</p>
+<h5 class="postItem--title">
+از المپیاد زیست تا ++Turbo C - داستان برنامه‌نویس شدنم
+</h5>
+</a>
+<div class="postItem-footer">
+<a href="https://virgool.io/@mahdavipanah" class="userInfo">
+<div class="avatar">
+<img src="https://files.virgool.io/upload/users/2800/avatar/3r7RC9.jpeg?x-img=v1/resize,h_120,w_120/optimize,q_100" alt="حمیدرضا مهدوی‌پناه">
+</div>
+<div class="more">
+<span class="name">حمیدرضا مهدوی‌پناه</span>
+<time class="readTime">خواندن ۸ دقیقه</time>
+</div>
+</a>
+<button data-model="post" data-action-name="bookmark" data-identifier="lhadmumbmgbk" class="btn-bookmark js-bookmark ">
+<svg class="icon-svg iconSvg-style" width="24" height="24" viewBox="0 0 24 24">
+<path d="M17.016 3c1.078 0 1.969 0.938 1.969 2.016v15.984l-6.984-3-6.984 3v-15.984c0-1.078 0.891-2.016 1.969-2.016h10.031z"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="app-root-comments"></div>
+</div>
+</section>
+</main>
+</section>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register('https://virgool.io/sw.js').then(function(reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+    </script>
+<div id="app-root-modal"></div>
+<script>
+  window.shareData = {
+    authUser: {"name":"کارگر انترناسیونالیست","username":"internationalistproletariat","hash":"fbvvvkmfoygq","avatar":"https:\/\/virgool.io\/images\/default-avatar.jpg","bio":null,"followers_count":0,"following_count":0,"activated":true,"blocked":false},
+    entryData: [],
+    hostname: "https://virgool.io",
+    frontend_env: "production",
+  }
+</script>
+<script>
+      window.publicationData = {"id":4405,"user_id":659418,"name":"Novira","custom_domain":null,"title":"\u0622\u0628\u0652\u06cc\u0652\u200c\u0628\u064e\u0646\u064e\u0641\u0652\u0634\u0652","description":"\u0641\u06cc\u0644\u0645\u060c \u0633\u0631\u06cc\u0627\u0644\u060c \u0627\u0646\u06cc\u0645\u06cc\u0634\u0646\u060c \u06af\u06cc\u0645\u060c \u06a9\u062a\u0627\u0628 \u0648 \u0647\u0631 \u0686\u06cc\u0632\u06cc \u06a9\u0647 \u0628\u0631\u0627\u06cc \u0641\u0631\u0627\u0631 \u0627\u0632 \u0627\u06cc\u0646 \u062f\u0646\u06cc\u0627 \u0648 \u06cc\u0627 \u0628\u0647\u062a\u0631 \u06a9\u0631\u062f\u0646 \u0627\u06cc\u0646 \u062f\u0646\u06cc\u0627 \u0645\u0645\u06a9\u0646\u0647 \u0644\u0627\u0632\u0645 \u0628\u0627\u0634\u0646! \u0627\u0646\u062a\u0634\u0627\u0631 \u067e\u0633\u062a \u062a\u0648 \u0622\u0628\u06cc \u0628\u0646\u0641\u0634:https:\/\/vrgl.ir\/vEBd9","main_domain":null,"hash":"ntpwftp33dgt","twitter":null,"instagram":null,"telegram":null,"color":"#9370db","text_color":"#a6c4ed","rss_icon":1,"logo":"upload\/publication\/ntpwftp33dgt\/ix1mv0.jpeg","header_image":null,"followers":441,"direction":"rtl","created_at":"2021-03-08 12:35:20","updated_at":"2021-11-23 16:25:49"}
+    </script>
+<script data-script="commonjs" type="text/javascript" src="https://virgool.io/js/commons.js?v=v2.6.9"></script>
+<script type="text/javascript" src="https://virgool.io/js/main.js?v=v2.6.9"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"45c20108ef","applicationID":"3165686","transactionName":"MhBSZQoZWENVBkdbWwtacVIMEVleGxVGUFgMFlFFERdYHl0LR1dGCxRc","queueTime":0,"applicationTime":688,"atts":"HldRE0IDS00=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v64f9daad31f64f81be21cbef6184a5e31634941392597" integrity="sha512-gV/bogrUTVP2N3IzTDKzgP0Js1gg4fbwtYB6ftgLbKQu/V8yH2+lrKCfKHelh4SO3DPzKj4/glTO+tNJGDnb0A==" data-cf-beacon='{"rayId":"6b7c64ef6d3159fb","version":"2021.11.0","r":1,"token":"29b1701ad74349db9ca1bd740a3603c1","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
